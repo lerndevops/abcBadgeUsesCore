@@ -1,0 +1,71 @@
+﻿@model ciBadgeForWeb.Models.UserLogin
+
+@{
+    ViewBag.Title = "Login";
+    //Layout = "~/Views/Shared/_Layout_Login.cshtml";
+}
+
+<!--https://www.c-sharpcorner.com/article/simple-login-application-using-Asp-Net-mvc/ -->
+
+<div class="jumbotron">
+    @*<h1>ABC Badge Web</h1>*@
+    @*<img src="~/Images/ABCBadgeLogo.png" width="500" alt="ABC Badge Web" />
+        <img src="~/Images/ThomasDownesLogo.png" width="400" alt="ABC Solutions" />*@
+    <h2>by Thomas C. Downes</h2>
+    <p class="lead">ABC Badge Web by Thomas C. Downes is a software service enabling you to create badges for any group of people.</p>
+    @*<p><a href="https://abcBadge.AzureWebsites.net/card-printing-software/" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+    <p><a href="~/Home/LoginPlain" class="btn btn-primary btn-lg">Log in &raquo;</a></p>
+</div>
+
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+{
+    <fieldset>
+        <legend>Please log into ABC Badge Web.</legend>
+
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        @if (@ViewBag.Message != null)
+        {
+            <div style="border: 1px solid red">
+                @ViewBag.Message
+            </div>
+        }
+        <table>
+            <tr>
+                <td>@Html.LabelFor(a => a.UserName)</td>
+                <td>@Html.TextBoxFor(a => a.UserName)</td>
+                <td>@Html.ValidationMessageFor(a => a.UserName)</td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(a => a.Password)
+                </td>
+                <td>
+                    @Html.PasswordFor(a => a.Password)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(a => a.Password)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Login" />
+                    @*<br />
+                    To skip the login process: <input type="submit" value="Bypass" />*@
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </fieldset>
+}
+
+@using (Html.BeginForm("Bypass", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <p>To skip the login process: <input type="submit" value="Bypass" /></p>
+}
+
+
+

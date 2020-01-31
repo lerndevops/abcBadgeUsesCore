@@ -1,8 +1,53 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+
+    <div class="jumbotron">
+        @*<h1>CI Badge for the Web</h1>*@
+        @*<img src="~/Images/ABCBadgeLogo.png" width="500" alt="ABC Badge for the Web" />
+        <img src="~/Images/ABCSolutionsLogo.png" width="400" alt="ABC Solutions" />*@
+        <h2>Welcome to ABC Badge by Thomas C. Downes</h2>
+        <p class="lead">ABC Badge for the Web is a software service enabling you to create badge-cards for any group of people.</p>
+        @*<p><a href="https://abcBadge.AzureWebsites.net/card-printing-software/" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+    </div>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            @*<img src="~/Images/CIBadgeLogo.png" />*@
+            ABC Badge by Thomas C. Downes is a service enabling you to create badges for any group of people, e.g. your employees or students.
+            Design a layout, confirm the individuals have their correct data and picture,
+            and print the badge!
+        </p>
+       @* <p><a class="btn btn-default" href="https://abcBadge.AzureWebsites.net/card-printing-software/">Learn more &raquo;</a></p>*@
+    </div>
+    <div class="col-md-4">
+        <h2>Card Printing Services</h2>
+        <p>We provide great card-printing services.</p>
+      @*  <p><a class="btn btn-default" href="https://abcBadge.AzureWebsites.net/services/card-printing-design/">Learn more &raquo;</a></p>*@
+    </div>
+    <div class="col-md-4">
+        <h2>Customer Service</h2>
+        <p>Our Technical Support Team can resolve most issues using remote access.</p>
+       @* <p><a class="btn btn-default" href="https://abcBadge.AzureWebsites.net/customer-service/">Learn more &raquo;</a></p>*@
+    </div>
+    <div class="col-md-4">
+        <h2>Web Forms</h2>
+        <p>ASP.NET MVC can run webforms.</p>
+        @*<p><a class="btn btn-default" href="../WebForm1.aspx">Learn more &raquo;</a></p>*@
+    </div>
+    <div class="col-md-4">
+        <h2>Steps 1 and 2</h2>
+        <p>Let's combine searching and editing in one page, as in Steps 1 and 2 on Main Data Entry.</p>
+      @*  <p><a class="btn btn-default" href="../Steps1and2/Edit">Learn more &raquo;</a></p>*@
+    </div>
 </div>
+
+
+
+
