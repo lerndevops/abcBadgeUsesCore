@@ -7,11 +7,31 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\CIRecipient - May28.cs" />
+    <Compile Remove="Models\PortraitImageModel - May28.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Models\CILayoutPrint.BAK.txt" />
+    <None Remove="Models\CILayoutPrint.BK1.txt" />
+    <None Remove="Models\CILayoutPrint.BK2.txt" />
+    <None Remove="Models\CIRecipient..BAK.txt" />
+    <None Remove="Models\CIRecipient..BK1.txt" />
+    <None Remove="Models\CIRecipient..txt" />
+    <None Remove="Models\CIRecipient.BAK.txt" />
+    <None Remove="Models\CIRecipient.BK1.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.10" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Scripts\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ciLayout\ciBadgeGen_Core\ciBadgeGen_Lib_Core.csproj" />
   </ItemGroup>
 
 
