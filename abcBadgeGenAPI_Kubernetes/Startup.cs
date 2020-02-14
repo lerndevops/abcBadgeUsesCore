@@ -10,10 +10,17 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
+/// <summary>
+///  What is kubernetes?  https://azure.microsoft.com/en-us/topic/what-is-kubernetes/
+/// </summary>
 namespace abcBadgeGenAPI_Kubernetes
 {
     public class Startup
     {
+
+        /// <summary>
+        /// What is kubernetes?  https://azure.microsoft.com/en-us/topic/what-is-kubernetes/
+        /// </summary>
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
